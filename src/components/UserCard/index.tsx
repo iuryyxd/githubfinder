@@ -1,14 +1,14 @@
-import React from "react";
 import { FiMapPin, FiUser, FiUsers } from "react-icons/fi";
 import { UserInfo } from "../../App";
+import Input from "../Input";
 
-import styles from './UserCard.module.scss'
+import styles from "./UserCard.module.scss";
 
 interface UserCardProps {
-    userInfo: UserInfo;
+  userInfo: UserInfo;
 }
 
-function UserCard({userInfo}: UserCardProps) {
+function UserCard({ userInfo }: UserCardProps) {
   return (
     <div className={styles.main__info}>
       <aside className={styles.main__aside}>
@@ -18,51 +18,24 @@ function UserCard({userInfo}: UserCardProps) {
       </aside>
 
       <div className={styles.main__text}>
-        <div>
-          <label htmlFor="login">
-            <FiUser /> Usuário:
-          </label>
-          <input type="text" readOnly value={userInfo.login} name="login" />
-        </div>
+        <Input name="login" inputValue={userInfo.login}>
+          <FiUser /> Usuário:
+        </Input>
 
-        <div>
-          <label htmlFor="site">
-            <FiMapPin color="#fff" size={20} /> Local:
-          </label>
-          <input
-            type="text"
-            readOnly
-            value={userInfo.location ? userInfo.location : "Não informado."}
-            name="site"
-          />
-        </div>
+        <Input name="site" inputValue={userInfo.site}>
+          <FiMapPin color="#fff" size={20} /> Local:
+        </Input>
 
-        <div>
-          <label htmlFor="followers">
-            <FiUsers /> Seguidores:{" "}
-          </label>
-          <input
-            type="text"
-            readOnly
-            value={userInfo.followers}
-            name="followers"
-          />
-        </div>
+        <Input name="followers" inputValue={userInfo.followers}>
+          <FiUsers /> Seguidores:
+        </Input>
 
-        <div>
-          <label htmlFor="following">
-            <FiUsers /> Seguindo:
-          </label>
-          <input
-            type="text"
-            readOnly
-            value={userInfo.following}
-            name="following"
-          />
-        </div>
+        <Input name="following" inputValue={userInfo.following}>
+          <FiUsers /> Seguindo:
+        </Input>
 
         <textarea readOnly cols={30} rows={10}>
-          {userInfo.bio ? userInfo.bio : "Não informada."}
+          {userInfo.bio ? userInfo.bio : "Biografia não informada."}
         </textarea>
       </div>
     </div>
