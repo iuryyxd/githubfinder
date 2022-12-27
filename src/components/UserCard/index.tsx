@@ -22,7 +22,7 @@ function UserCard({ userInfo }: UserCardProps) {
           <FiUser /> Usuário:
         </Input>
 
-        <Input name="site" inputValue={userInfo.site}>
+        <Input name="location" inputValue={userInfo.location}>
           <FiMapPin color="#fff" size={20} /> Local:
         </Input>
 
