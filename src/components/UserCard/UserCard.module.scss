@@ -1,0 +1,89 @@
+.main__info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+
+    .main__aside {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+      height: 100%;
+
+      border-right: 2px solid rgba(255, 255, 255, 0.568);
+      padding-right: 1rem;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid #13293d;
+      }
+
+      .aside__userName {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .aside__location {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+
+        span {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+  .main__text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-left: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      color: #fff;
+    }
+
+    input {
+      height: 30px;
+      background: #13293d;
+      border-radius: 5px;
+      padding-inline: 10px;
+      color: #fff;
+    }
+
+    textarea {
+      width: 100%;
+      background: #13293d;
+      border-radius: 5px;
+      padding: 10px;
+      border: none;
+      color: #fff;
+      resize: none;
+
+      grid-area: textarea;
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+
+}
