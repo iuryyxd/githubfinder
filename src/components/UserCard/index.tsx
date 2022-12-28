@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { FiMapPin, FiUser, FiUsers } from "react-icons/fi";
 import { UserInfo } from "../../App";
 import Input from "../Input";
@@ -9,6 +10,7 @@ interface UserCardProps {
 }
 
 function UserCard({ userInfo }: UserCardProps) {
+
   return (
     <div className={styles.main__info}>
       <aside className={styles.main__aside}>
@@ -34,9 +36,7 @@ function UserCard({ userInfo }: UserCardProps) {
           <FiUsers /> Seguindo:
         </Input>
 
-        <textarea readOnly cols={30} rows={10}>
-          {userInfo.bio ? userInfo.bio : "Biografia não informada."}
-        </textarea>
+        <textarea readOnly cols={30} rows={10} value={userInfo.bio ? userInfo.bio : "Biografia não informada."} />
       </div>
     </div>
   );

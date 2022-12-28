@@ -22,7 +22,7 @@ export interface UserInfo {
 
 function App() {
   const [userName, setUserName] = useState<string | null>(null);
-  const [userInfo, setUserInfo] = useState<UserInfo| null>(null);
+  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
 
   const handleSearchUser = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
